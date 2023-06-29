@@ -9,11 +9,19 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", function () {
       if (window.scrollY > 85) return;
-      fixHeaderRef.current.style.boxShadow = `0px 0px 20px 7px rgba(0, 0, 0, ${
-        (window.scrollY / 85) * 0.2
-      })`;
+      // fixHeaderRef.current.style.boxShadow = `0px 0px 20px 7px rgba(0, 0, 0, ${
+      //   (window.scrollY / 85) * 0.2
+      // })`;
+
+      if (window.scrollY > 20) {
+        shadowDivRef.current.style.height = `${82}px`;
+        shadowDivRef.current.style.position = `fixed`;
+        shadowDivRef.current.style.top = 0;
+      } else {
+        shadowDivRef.current.style.height = `${142 - window.scrollY}px`;
+      }
       shadowDivRef.current.style.boxShadow = `0px 0px 20px 7px rgba(0, 0, 0, ${
-        (window.scrollY / 85) * 0.4
+        (window.scrollY / 85) * 0.2
       })`;
       console.log("Scrolling", window.scrollY);
     });
@@ -108,6 +116,7 @@ const ShadowDiv = styled.div`
   width: 100%;
   height: 100%;
   transition: 0.5s ease;
+  z-index: 100;
   // box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.2);
   // background-color: red;
 `;
