@@ -1,0 +1,35 @@
+:root {
+  --white: #fff;
+  --cream: #f8db62;
+  --gray: #4c4d5f;
+  --bluish-green: #00b289;
+  --green: #22ad01;
+  --black-green: #003c2f;
+  --border-color: #d3dcd4;
+  --gray-green: #65816d;
+  --orange: #ee8146;
+  --quote-background: #ecf1ec;
+  --one-twenty-pixel: 7.5rem;
+  --seventy-pixel: 4.375rem;
+  --sixty-pixel: 3.75rem;
+  --fifty-pixel: 3.125rem;
+  --forty-pixel: 2.5rem;
+  --thirty-pixel: 1.875rem;
+  --twenty-five-pixel: 1.5625rem;
+  --twenty-pixel: 1.25rem;
+  --fifteen-pixel: 0.9375rem;
+  --ten-pixel: 0.625rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
