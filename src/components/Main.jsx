@@ -151,6 +151,35 @@ const DurationButton = styled.button`
   &.right > span:first-child {
     color: var(--bluish-green);
   }
+
+  @media (max-width: 420px) {
+    padding: 0.3rem;
+
+    & > span {
+      padding: 0.7rem 1.2rem;
+      height: 43px;
+    }
+
+    & > span:first-child {
+      max-width: 80px;
+      min-width: initial;
+    }
+
+    & > span:last-child {
+      width: 186px;
+      min-width: initial;
+    }
+
+    &:before {
+      height: 43px;
+      width: 80px;
+    }
+
+    &.right::before {
+      width: 185px;
+      left: 86.4px;
+    }
+  }
 `;
 const DurationContainer = styled.div`
   display: flex;
